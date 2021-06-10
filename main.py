@@ -17,6 +17,8 @@ TRELLO_OAUTH_TOKEN = os.environ.get('TRELLO_OAUTH_TOKEN')
 
 trello_api_client = TrelloAPIClient(TRELLO_API_KEY, TRELLO_OAUTH_TOKEN)
 
+dateshift = timedelta(days=0.5)
+
 
 @app.route("/push_trello_data")
 def push_trello_data():
